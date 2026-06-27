@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Equipe</title>
+</head>
+<body>
+    <h1>ATIVIDADE 3</h1>
+
+
+    <h2>CADASTRO DE USUÁRIO!</h2>
+    <form>
+        <label for="titulo">Nome:</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Digite aqui"><br><br>
+
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Digite aqui"><br><br>
+
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" placeholder="Digite aqui"><br><br>
+       
+        <div class="mostrar-senha">
+             <input type="checkbox" id="mostrarSenha" onclick="toggleSenha()">
+             <label for="mostrarSenha">Mostrar senha</label>
+        </div>
+       
+        <button type="submit">Cadastrar</button>
+    </form>
+
+
+      <script>
+        function toggleSenha() {
+            const campoSenha = document.getElementById("senha");
+            if (campoSenha.type === "password") {
+                campoSenha.type = "text";
+            } else {
+                campoSenha.type = "password";
+            }
+        }
+      </script>
+
+
+      <h2>CADASTRO DE TAREFAS!</h2>
+      <form>
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Digite aqui"><br><br>
+
+
+        <label for="descricao">Descrição:</label><br>
+        <textarea id="descricao" name="descricao" rows="4" cols="40"></textarea>
+
+
+        <label for="prioridade">Prioridade:</label>
+        <select id="prioridade" name="prioridade">
+            <option>Baixa</option>
+             <option>Média</option>
+              <option>Alta</option>
+        </select><br><br>
+
+
+        <button type="submit">Salvar tarefas</button>
+      </form>
+
+
+      <h2>RESERVA DE ESPAÇO!</h2>
+      <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite aqui"><br><br>
+
+
+        <label for="turma">Turma:</label>
+        <input type="text" id="turma" name="turma" placeholder="Digite aqui"><br><br>
+
+
+        <label for="horario">Horário:</label>
+        <input type="time" id="horario" name="horario" placeholder="Digite aqui"><br><br>
+
+
+          <button type="submit">Reservar</button>        
+      </form>
+
+
+      <div class="botao-container">
+        <a href="equipe2.html" class="botao">Ir para outra página</a>
+      </div>
+</body>
+</html>
+

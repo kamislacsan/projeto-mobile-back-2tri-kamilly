@@ -1,0 +1,169 @@
+body {
+    background-color: #213657;
+}
+.titulo {
+    text-align: center;
+}
+h1 {
+    color: #FFF3A2;
+    text-align: center;
+}
+h2 {
+    color: #FFF3A2;
+    text-align: center;
+}
+h3 {
+    color: #FFF3A2;
+    white-space: line;
+    text-align: center;
+}
+p {
+    color: white;
+    line-height: 1.0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    align-items: center;
+}
+.caixa {
+    background-color: #2f4568;
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba (0,0,0,0,3);
+    text-align: center;
+}
+.caixas {
+    background-color: #2f4568;
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba (0,0,0,0,3);
+    text-align: center;
+    color: white;
+}
+.botao-container {
+    text-align: start;
+    margin-top: 20px;
+}
+.botao {
+    display: inline-block;
+    background-color: #2f4568;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'bold';
+}
+.container2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.item {
+    text-align: center;
+}
+.item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+}
+nav ul {
+  list-style: none;      
+  padding: 0;
+  margin: 20px 0;
+  display: flex;          
+  justify-content: center;
+  gap: 30px;              
+}
+nav ul li a {
+  text-decoration: none;  
+  color: #FFF3A2;        
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+nav ul li a:hover {
+  background-color: #2f4568;
+  color:#FFF3A2;              
+}
+form {
+    background-color: #2f4568;
+    width: 350px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-align: left;  
+}
+form h2 {
+  text-align: center;
+  color: #FFF3A2;
+}
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+}
+input, textarea, select {
+    width: 320px;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #FFF3A2;
+    outline: none;
+    background-color: #2f4568;
+}
+button {
+  display: block;
+  width: 100px;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #2f4568;
+  color: #FFF3A2;
+  font-weight: bold;
+  border: 1px solid #FFF3A2;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #4e77b8;
+}
+.mostrar-senha {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 0px;
+}
+.mostrar-senha label {
+    color: #FFF3A2;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.mostrar-senha input[type="checkbox"] {
+    width: 18px;
+    height: 20px;
+    accent-color: #4e77b8;
+}
+input[type="text"],
+textarea,
+select {
+    width: 330px;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #FFF3A2;
+    background-color: #213657;
+    color: white;
+}
+textarea {
+    resize: none;
+}
+

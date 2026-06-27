@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulários</title>
+</head>
+<body>
+     <h2>FORMULÁRIO DE LOGIN!</h2>
+      <form>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Digite aqui"><br><br>
+
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" placeholder="Digite aqui"><br><br>
+
+
+        <div class="mostrar-senha">
+             <input type="checkbox" id="mostrarSenha" onclick="toggleSenha()">
+             <label for="mostrarSenha">Mostrar senha</label>
+        </div>
+
+
+        <button type="submit">Entrar</button>    
+      </form>
+
+
+       <script>
+        function toggleSenha() {
+            const campoSenha = document.getElementById("senha");
+            if (campoSenha.type === "password") {
+                campoSenha.type = "text";
+            } else {
+                campoSenha.type = "password";
+            }
+        }
+      </script>
+
+
+      <h2>FORMULÁRIO DE CONTATO<br>
+         PARA A COORDENAÇÃO!</h2>
+         <form>
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto" placeholder="Digite aqui"><br><br>
+
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea name="mensagem" id="mensagem" rows="5" cols="40"></textarea>
+
+
+            <button type="submit">Enviar</button>
+         </form>
+</body>
+</html>
+

@@ -31,7 +31,7 @@ p {
 .btn {
   display: inline-block;
   background-color: #2f4568; 
-  color: white;
+  color: #2f4568;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
@@ -41,6 +41,6 @@ p {
   background-color: #4e77b8; 
 }
 .assunto {
-    color: white;
+    color: #2f4568;
     line-height: 1.5;
 }

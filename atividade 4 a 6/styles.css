@@ -8,6 +8,9 @@ h1 {
     color: #4181e8;
     text-align: center;
 }
+p {
+  color: #ffff;
+}
  button {
     display: block;
     margin: 20px auto;
@@ -28,24 +31,63 @@ h1 {
     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
     text-align: center;      
  }
- .cadastro {
-    width: 300px;
-    margin: auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-  }
+.form-box {
+  width: 350px;
+  margin: 50px auto;              
+  padding: 20px;                 
+  background-color: #91b3ea;     
+  border: 1px solid #4181e8;        
+  border-radius: 12px;            
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+}
+.form-box h2 {
+  text-align: center;
+  color: #ffff;
+  margin-bottom: 20px;
+}
+.form-box label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ffffffde;
+}
+.form-box input {
+  width: 95%;
+  padding: 6px;
+  margin-top: 5px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+.form-box button {
+  display: block;
+  width: 90%;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #007BFF; 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.form-box button:hover {
+  background-color: #0056b3; 
+}
+.botao-container {
+  text-align: start;
+  margin-top: 20px;
+}
+.botao {
+  display: inline-block;
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: 'bold';
+  cursor: pointer;
+}
+
+
   
-  .cadastro label {
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  
-  .cadastro input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-  }
   
       

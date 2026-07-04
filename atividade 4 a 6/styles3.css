@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #c3d8f7;
+    color: #333;
+    padding: 20px;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #a7bee9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+}
+
+.dashboard-header h2 {
+    color: #ffff;
+}
+
+.btn-open-form {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(108, 92, 231, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-open-form:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(108, 92, 231, 0.3);
+}
+
+.section-title {
+    font-size: 1.15rem;
+    color: #4a5568;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.section-container {
+    margin-bottom: 30px;
+}
+.tasks-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.tasks-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; 
+}
+
+.task-card {
+  background: #ffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  width: 220px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  font-weight: bold;
+}
+
+.task-card.done {
+  border-left: 8px solid #28a745; 
+}
+.task-card.pending {
+  border-left: 8px solid #dc3545; 
+}
+
+.task-card h4 {
+  margin-bottom: 10px;
+}
+.task-card p {
+  font-weight: normal;
+  color: #a1a1a1;
+}
+
+
+.alerts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.alert-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    border-left: 5px solid #ccc;
+}
+
+.alert-card h4 {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+.alert-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.alert-card.warning { border-left-color: #f1c40f; background: #fefbe6; h4 { color: #b7791f; } }
+.alert-card.danger { border-left-color: #e74c3c; background: #fff5f5; h4 { color: #c53030; } }
+.alert-card.success { border-left-color: #2ecc71; background: #f0fff4; h4 { color: #22543d; } }
+
+.dashboard-content {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.content-left {
+    flex: 2;
+    min-width: 450px;
+}
+
+.content-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.table-responsive {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 15px 20px;
+    font-size: 0.95rem;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #718096;
+    font-weight: 600;
+    border-bottom: 1px solid #edf2f7;
+}
+
+td {
+    border-bottom: 1px solid #edf2f7;
+    color: #4a5568;
+}
+
+.status {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.status.present { background-color: #c6f6d5; color: #22543d; }
+.status.absent { background-color: #fed7d7; color: #9b2c2c; }
+.status.late { background-color: #feebc8; color: #9c4221; }
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.todo-item {
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.todo-indicator {
+    width: 6px;
+}
+
+.todo-info {
+    padding: 15px;
+}
+
+.todo-info h5 {
+    font-size: 0.95rem;
+    color: #2d3748;
+    margin-bottom: 4px;
+}
+
+.todo-info p {
+    font-size: 0.8rem;
+    color: #a0aec0;
+}
+
+.todo-item.done {
+    .todo-indicator { background-color: #cbd5e0; }
+    .todo-info h5 { text-decoration: line-through; color: #a0aec0; }
+}
+
+.todo-item.pending .todo-indicator {
+    background-color: #3182ce;
+}
+
+@media (max-width: 900px) {
+    .dashboard-content {
+        flex-direction: column;
+    }
+    
+    .content-left, .content-right {
+        width: 100%;
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .btn-open-form {
+        width: 100%;
+    }
+}
+

@@ -23,7 +23,7 @@ body {
     background: #a7bee9;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     margin-bottom: 25px;
 }
 
@@ -59,42 +59,45 @@ body {
 .section-container {
     margin-bottom: 30px;
 }
+
 .tasks-section {
-  margin-top: 30px;
-  text-align: center;
+    margin-top: 30px;
+    text-align: center;
 }
 
 .tasks-grid {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap; 
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .task-card {
-  background: #ffff;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 15px;
-  width: 220px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-  font-weight: bold;
+    background: #ffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    width: 220px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: bold;
 }
 
 .task-card.done {
-  border-left: 8px solid #28a745; 
+    border-left: 8px solid #28a745;
 }
+
 .task-card.pending {
-  border-left: 8px solid #dc3545; 
+    border-left: 8px solid #dc3545;
 }
 
 .task-card h4 {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
+
 .task-card p {
-  font-weight: normal;
-  color: #a1a1a1;
+    font-weight: normal;
+    color: #a1a1a1;
 }
 
 
@@ -108,7 +111,7 @@ body {
     background: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
     border-left: 5px solid #ccc;
 }
 
@@ -123,9 +126,32 @@ body {
     line-height: 1.4;
 }
 
-.alert-card.warning { border-left-color: #f1c40f; background: #fefbe6; h4 { color: #b7791f; } }
-.alert-card.danger { border-left-color: #e74c3c; background: #fff5f5; h4 { color: #c53030; } }
-.alert-card.success { border-left-color: #2ecc71; background: #f0fff4; h4 { color: #22543d; } }
+.alert-card.warning {
+    border-left-color: #f1c40f;
+    background: #fefbe6;
+
+    h4 {
+        color: #b7791f;
+    }
+}
+
+.alert-card.danger {
+    border-left-color: #e74c3c;
+    background: #fff5f5;
+
+    h4 {
+        color: #c53030;
+    }
+}
+
+.alert-card.success {
+    border-left-color: #2ecc71;
+    background: #f0fff4;
+
+    h4 {
+        color: #22543d;
+    }
+}
 
 .dashboard-content {
     display: flex;
@@ -147,7 +173,7 @@ body {
     background: white;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
 table {
@@ -156,7 +182,8 @@ table {
     text-align: left;
 }
 
-th, td {
+th,
+td {
     padding: 15px 20px;
     font-size: 0.95rem;
 }
@@ -179,9 +206,21 @@ td {
     font-size: 0.8rem;
     font-weight: bold;
 }
-.status.present { background-color: #c6f6d5; color: #22543d; }
-.status.absent { background-color: #fed7d7; color: #9b2c2c; }
-.status.late { background-color: #feebc8; color: #9c4221; }
+
+.status.present {
+    background-color: #c6f6d5;
+    color: #22543d;
+}
+
+.status.absent {
+    background-color: #fed7d7;
+    color: #9b2c2c;
+}
+
+.status.late {
+    background-color: #feebc8;
+    color: #9c4221;
+}
 
 .todo-list {
     display: flex;
@@ -194,7 +233,7 @@ td {
     border-radius: 8px;
     display: flex;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
 .todo-indicator {
@@ -217,8 +256,14 @@ td {
 }
 
 .todo-item.done {
-    .todo-indicator { background-color: #cbd5e0; }
-    .todo-info h5 { text-decoration: line-through; color: #a0aec0; }
+    .todo-indicator {
+        background-color: #cbd5e0;
+    }
+
+    .todo-info h5 {
+        text-decoration: line-through;
+        color: #a0aec0;
+    }
 }
 
 .todo-item.pending .todo-indicator {
@@ -229,8 +274,9 @@ td {
     .dashboard-content {
         flex-direction: column;
     }
-    
-    .content-left, .content-right {
+
+    .content-left,
+    .content-right {
         width: 100%;
         min-width: 100%;
     }
@@ -242,9 +288,8 @@ td {
         align-items: flex-start;
         gap: 15px;
     }
-    
+
     .btn-open-form {
         width: 100%;
     }
 }
-

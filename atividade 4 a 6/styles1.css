@@ -1,45 +1,54 @@
 body {
-    background-color: #a3c4f9c2; 
+    background-color: #a3c4f9c2;
     font-family: 'bold';
     margin: 0;
     padding: 0;
 }
+
 header {
     text-align: center;
 }
+
 h1 {
     color: #4181e8;
     text-align: center;
 }
+
 h2 {
     color: #4181e8;
 }
+
 h3 {
     color: #2b68ca;
 }
+
 .container {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
- }
+}
+
 .cards {
-    display: flex;             
-    gap: 20px;                         
-    justify-content: center;   
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
+
 .card {
-    background-color: #6d9ff090;     
-    border: 1px solid #ccc;    
-    border-radius: 10px;        
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-    padding: 20px;              
-    width: 250px;              
+    background-color: #6d9ff090;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
 }
+
 .card p {
     font-size: 17px;
     line-height: 1.4;
     color: #ffff;
 }
+
 .aviso {
     background-color: #6d9ff090;
     border-left: 5px solid #4181e8;
@@ -47,10 +56,12 @@ h3 {
     margin: 10px 0;
     border-radius: 10px;
 }
+
 .aviso.importante {
     border-left-color: #002aff;
     font-weight: bold;
 }
+
 .aviso p {
     color: #ffff;
 }

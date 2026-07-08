@@ -20,6 +20,12 @@ p {
     background-color: #4181e8;
     font-family: 'bold';
     border: 1px solid white;
+    cursor: pointer;
+ }
+ button:hover {
+    background-color: #a3c4f9c2;
+    color: #4181e8;
+    border: 1px solid #4181e8;
  }
  .caixa {
     width: 300px;             
@@ -70,7 +76,9 @@ p {
   cursor: pointer;
 }
 .form-box button:hover {
-  background-color: #0056b3; 
+   background-color: #a3c4f9c2;
+    color: #4181e8;
+    border: 1px solid #4181e8; 
 }
 .botao-container {
   text-align: start;
@@ -85,6 +93,11 @@ p {
   text-decoration: none;
   font-family: 'bold';
   cursor: pointer;
+}
+.botao:hover {
+   background-color: #a3c4f9c2;
+    color: #4181e8;
+    border: 1px solid #4181e8;
 }
 
 

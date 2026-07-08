@@ -1,0 +1,41 @@
+Questão 3: escreva o pedido e a resposta de um login com e-mail e senha.
+
+
+Pedido HTTP:
+
+
+POST /login HTTP/1.1
+Host: escola.com
+Content-Type: application/json
+
+
+{
+  "email": "aluno@escola.com",
+  "senha": "123456"
+}
+
+
+Resposta HTTP:
+
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+
+{
+  "mensagem": "Login realizado com sucesso!"
+}
+Questão 4: explique por que o servidor usa o código 201 ao criar um registro.
+
+
+O código 201 created é usado quando o servidor cria um novo registro com sucesso, como um novo usuário, uma tarefa ou um aviso escolar.
+
+
+Questão 5: escreva o passo a passo completo de um cadastro de usuário, desde o preenchimento do formulário até a resposta do servidor.
+O usuário preenche o formulário com nome, e-mail e senha.
+Clica no botão Cadastrar.
+O navegador envia os dados para o servidor usando o método POST.
+O servidor recebe os dados e verifica se estão corretos.
+Se tudo estiver certo, o servidor salva o novo usuário no banco de dados.
+O servidor responde com o código 201 (Created) informando que o cadastro foi realizado com sucesso.
+O navegador mostra uma mensagem confirmando que o usuário foi cadastrado.

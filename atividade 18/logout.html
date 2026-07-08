@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Logout</title>
+</head>
+<body>
+
+
+<button onclick="logout()">Logout</button>
+
+
+<p id="msg"></p>
+
+
+<script>
+async function logout() {
+
+
+  const token = localStorage.getItem("token");
+
+
+  const resposta = await fetch("http://localhost:3000/logout", {
+    method: "POST",
+    headers: {
+      Authorization: token
+    }
+  });
+
+
+  const dados = await resposta.json();
+
+
+  if (resposta.ok) {
+    localStorage.removeItem("token");
+  }
+
+
+  document.getElementById("msg").innerHTML = dados.mensagem;
+}
+</script>
+
+
+</body>
+</html>

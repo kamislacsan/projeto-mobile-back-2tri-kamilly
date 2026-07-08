@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Avisos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+  <h1>Sistema de Avisos Escolar</h1>
+
+
+  <!-- CADASTRO DE AVISO -->
+  <div class="card">
+    <h2>Cadastrar Aviso</h2>
+
+
+    <input type="text" id="titulo" placeholder="Título do aviso">
+    <button id="btnAviso">Enviar Aviso</button>
+
+
+    <p id="resultadoAviso"></p>
+  </div>
+
+
+  <!-- CADASTRO DE TAREFA -->
+  <div class="card">
+    <h2>Cadastrar Tarefa</h2>
+
+
+    <input type="text" id="tarefa" placeholder="Nome da tarefa">
+    <button id="btnTarefa">Enviar Tarefa</button>
+
+
+    <p id="resultadoTarefa"></p>
+  </div>
+
+
+  <!-- LOGIN -->
+  <div class="card">
+    <h2>Login</h2>
+
+
+    <input type="email" id="email" placeholder="E-mail">
+    <input type="password" id="senha" placeholder="Senha">
+
+
+    <button id="btnLogin">Entrar</button>
+
+
+    <p id="resultadoLogin"></p>
+  </div>
+
+
+<script>
+  // AVISO
+  const titulo = document.querySelector('#titulo');
+  const btnAviso = document.querySelector('#btnAviso');
+  const resultadoAviso = document.querySelector('#resultadoAviso');
+
+
+  btnAviso.addEventListener('click', async () => {
+
+
+    const dados = { titulo: titulo.value };
+
+
+    const resposta = await fetch('http://localhost:3000/avisos', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(dados)
+    });
+
+
+    const retorno = await resposta.json();
+    resultadoAviso.textContent = retorno.mensagem;
+  });
+
+
+  // TAREFA
+  const tarefa = document.querySelector('#tarefa');
+  const btnTarefa = document.querySelector('#btnTarefa');
+  const resultadoTarefa = document.querySelector('#resultadoTarefa');
+
+
+  btnTarefa.addEventListener('click', async () => {
+
+
+    const dados = { nome: tarefa.value };
+
+
+    const resposta = await fetch('http://localhost:3000/tarefas', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(dados)
+    });
+
+
+    const retorno = await resposta.json();
+    resultadoTarefa.textContent = retorno.mensagem;
+  });
+
+
+  // LOGIN
+  const email = document.querySelector('#email');
+  const senha = document.querySelector('#senha');
+  const btnLogin = document.querySelector('#btnLogin');
+  const resultadoLogin = document.querySelector('#resultadoLogin');
+
+
+  btnLogin.addEventListener('click', async () => {
+
+
+    const dados = {
+      email: email.value,
+      senha: senha.value
+    };
+
+
+    const resposta = await fetch('http://localhost:3000/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(dados)
+    });
+
+
+    const retorno = await resposta.json();
+    resultadoLogin.textContent = retorno.mensagem;
+  });
+
+
+</script>
+
+
+</body>
+</html>

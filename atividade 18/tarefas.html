@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Tarefas</title>
+</head>
+<body>
+
+
+<h2>Tarefas</h2>
+
+
+<button onclick="buscar()">Ver tarefas</button>
+
+
+<pre id="resultado"></pre>
+
+
+<script>
+async function buscar() {
+
+
+  const token = localStorage.getItem("token");
+
+
+  const resposta = await fetch("http://localhost:3000/tarefas", {
+    headers: {
+      Authorization: token
+    }
+  });
+
+
+  const dados = await resposta.json();
+
+
+  document.getElementById("resultado").textContent =
+    JSON.stringify(dados, null, 2);
+}
+</script>
+
+
+</body>
+</html>

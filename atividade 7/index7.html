@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <div class="card">
+        <h2>1 - Botão com mensagem</h2>
+        <button id="btnMensagem">Clique aqui</button>
+    </div>
+
+
+    <div class="card">
+        <h2>2 - Lista de Tarefas</h2>
+
+
+        <input type="text" id="tarefa" placeholder="Digite uma tarefa">
+        <button id="btnTarefa">Adicionar</button>
+
+
+        <ul id="listaTarefas"></ul>
+    </div>
+
+
+    <div class="card">
+        <h2>3 - Nome do Aluno</h2>
+
+
+        <input type="text" id="nomeAluno" placeholder="Digite o nome">
+        <button id="btnNome">Mostrar</button>
+
+
+        <p id="resultado"></p>
+    </div>
+
+
+    <div class="card">
+        <h2>4 - Validação</h2>
+
+
+        <input type="text" id="campo" placeholder="Digite alguma coisa">
+        <button id="btnEnviar">Enviar</button>
+
+
+        <p id="mensagem"></p>
+    </div>
+
+
+    <div class="card">
+        <h2>5 - Lista de Avisos</h2>
+
+
+        <input type="text" id="aviso" placeholder="Digite um aviso">
+        <button id="btnAviso">Adicionar</button>
+
+
+        <ul id="listaAvisos"></ul>
+    </div>
+
+
+<script>
+
+
+const btnMensagem = document.querySelector("#btnMensagem");
+
+
+btnMensagem.addEventListener("click", () => {
+    alert("Tem nada no botão");
+});
+
+
+const campoTarefa = document.querySelector("#tarefa");
+const btnTarefa = document.querySelector("#btnTarefa");
+const listaTarefas = document.querySelector("#listaTarefas");
+
+
+btnTarefa.addEventListener("click", () => {
+
+
+    if(campoTarefa.value.trim() === ""){
+        alert("Coloque alguma tarefa para enviar");
+        return;
+    }
+
+
+    const item = document.createElement("li");
+    item.textContent = campoTarefa.value;
+
+
+    listaTarefas.appendChild(item);
+
+
+    campoTarefa.value = "";
+});
+
+
+const nomeAluno = document.querySelector("#nomeAluno");
+const btnNome = document.querySelector("#btnNome");
+const resultado = document.querySelector("#resultado");
+
+
+btnNome.addEventListener("click", () => {
+    resultado.textContent = "Nome do aluno: " + nomeAluno.value;
+});
+
+
+const campo = document.querySelector("#campo");
+const btnEnviar = document.querySelector("#btnEnviar");
+const mensagem = document.querySelector("#mensagem");
+
+
+btnEnviar.addEventListener("click", () => {
+
+
+    if(campo.value.trim() === ""){
+        mensagem.textContent = "Não foi possível enviar, preencha o campo";
+        mensagem.style.color = "red";
+    }else{
+        mensagem.textContent = "Enviado com sucesso!";
+        mensagem.style.color = "green";
+    }
+
+
+});
+
+
+const aviso = document.querySelector("#aviso");
+const btnAviso = document.querySelector("#btnAviso");
+const listaAvisos = document.querySelector("#listaAvisos");
+
+
+btnAviso.addEventListener("click", () => {
+
+
+    if(aviso.value.trim() === ""){
+        alert("Digite um aviso.");
+        return;
+    }
+
+
+    const item = document.createElement("li");
+    item.textContent = aviso.value;
+
+
+    listaAvisos.appendChild(item);
+
+
+    aviso.value = "";
+
+
+});
+
+
+</script>
+
+
+</body>
+</html>
+

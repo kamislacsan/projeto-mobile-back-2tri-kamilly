@@ -1,0 +1,57 @@
+// 1. Cite dois exemplos de situações em que o navegador usaria o método GET.
+// Para abrir uma página de um site e fazer uma pesquisa em um mecanismo de busca.
+
+
+
+
+// 2. Cite dois exemplos de situações em que o navegador usaria o método POST.
+// Enviar um formulário de cadastro e cadastrar um novo aviso escolar.
+
+
+
+
+// 3. Explique com suas palavras o que significa o código de status 404.
+// O código 404 significa que a página ou o recurso solicitado não foi encontrado no servidor.
+
+
+
+
+// 4. Explique o que acontece quando o servidor responde com 201.
+// O código 201 significa que a solicitação foi realizada com sucesso e um novo recurso foi criado no servidor.
+
+
+
+
+// 5. Escreva um pedido e uma resposta HTTP para o cadastro de um aviso escolar.
+
+
+/*
+
+
+Pedido HTTP
+
+
+POST /avisos HTTP/1.1
+Host: escola.com
+Content-Type: application/json
+
+
+{
+    "titulo": "Reunião de Pais",
+    "mensagem": "A reunião será na sexta-feira às 19h."
+}
+
+
+Resposta HTTP
+
+
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+
+{
+    "mensagem": "Aviso cadastrado com sucesso!"
+}
+
+
+*/
